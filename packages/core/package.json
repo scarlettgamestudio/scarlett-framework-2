@@ -5,6 +5,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "scarlett-commons": "0.0.1"
+    "scarlett-commons": "0.0.1",
+    "scarlett-math": "0.0.1"
   }
 }

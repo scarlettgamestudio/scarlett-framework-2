@@ -1,6 +1,5 @@
 {
   "name": "scarlett",
-  "private": true,
   "license": "Apache-2.0",
   "author": "João Alves <joao.cpp.sca@gmail.com> and Luís Fernandes aka Apidcloud <luisapidcloud@hotmail.com>",
   "devDependencies": {

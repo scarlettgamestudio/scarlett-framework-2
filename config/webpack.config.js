@@ -4,7 +4,8 @@ const glob = require("glob");
 module.exports = {
   mode: "development",
   entry: {
-    "scarlett-commons": glob.sync("./packages/commons/index.js"),
+    "scarlett-commons": "./packages/commons/index.js",
+    "scarlett-math": "./packages/math/index.js",
     "scarlett-core": glob.sync("./packages/core/src/**/*.js")
   },
   output: {
