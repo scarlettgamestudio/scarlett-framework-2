@@ -1,4 +1,6 @@
-import Simple from "scarlett-commons/src/simple";
+import { Simple } from "scarlett-commons";
 
 let x = new Simple();
-let y = x.methodA();
+let y = x.methodB();
+
+console.log(y);

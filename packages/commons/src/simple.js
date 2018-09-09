@@ -1,5 +1,5 @@
 export default class Simple {
-    methodA(){
-      return "something";
-    }
+  methodB() {
+    return "something";
   }
+}
