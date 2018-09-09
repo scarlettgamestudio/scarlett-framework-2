@@ -3,4 +3,4 @@ build
 coverage
 demos
 config
-webpack.config.js
+babel.config.js

@@ -8,9 +8,11 @@ module.exports = {
   },
   env: {
     browser: true,
-    es6: true
+    es6: true,
+    jest: true
   },
   extends: ["eslint:recommended", "plugin:import/errors", "plugin:import/warnings"],
+  plugins: ["jest"],
   rules: {
     "no-console": 0,
     "max-len": ["error", 120]
