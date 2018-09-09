@@ -11,6 +11,8 @@
     "babel-eslint": "9.0.0",
     "babel-jest": "23.4.2",
     "babel-loader": "8.0.2",
+    "commitizen": "2.10.1",
+    "cz-conventional-changelog": "2.1.0",
     "eslint": "5.5.0",
     "eslint-import-resolver-webpack": "0.10.1",
     "eslint-plugin-import": "2.14.0",
@@ -18,7 +20,9 @@
     "jest": "23.5.0",
     "lerna": "3.3.0",
     "lint-staged": "7.2.2",
+    "opt-cli": "1.6.0",
     "prettier-eslint-cli": "4.7.1",
+    "validate-commit-msg": "2.14.0",
     "webpack": "4.17.2",
     "webpack-cli": "3.1.0"
   },
@@ -26,8 +30,12 @@
     "build": "webpack --config config/webpack.config.js",
     "test": "jest --coverage",
     "watch:test": "jest --watch",
-    "format": "prettier-eslint --write \"packages/**/src/**/*.js\"",
-    "lint": "eslint ."
+    "format": "prettier-eslint --write \"packages/*/src/**/*.js\"",
+    "lint": "eslint .",
+    "commit": "git-cz",
+    "commitmsg": "opt --in commit-msg --exec \"validate-commit-msg\"",
+    "precommit": "lint-staged && opt --in pre-commit --exec \"npm run test && npm run build\"",
+    "validate": "run-p lint test build"
   },
   "lint-staged": {
     "*.js": [
