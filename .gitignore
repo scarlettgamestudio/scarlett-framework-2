@@ -1,3 +1,7 @@
+build
+.opt-in
+.opt-out
+
 # Logs
 logs
 *.log
