@@ -37,7 +37,9 @@
     "commit": "git-cz",
     "precommit": "lint-staged && opt --in pre-commit --exec \"npm test && npm run build\"",
     "commitmsg": "opt --in commit-msg --exec \"validate-commit-msg\"",
-    "validate": "run-p lint test build"
+    "validate": "run-p lint test build",
+    "link": "lerna bootstrap",
+    "postinstall": "npm run link"
   },
   "lint-staged": {
     "*.js": [
