@@ -17,6 +17,7 @@
     "eslint-import-resolver-webpack": "0.10.1",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jest": "21.22.0",
+    "husky": "0.14.3",
     "jest": "23.5.0",
     "lerna": "3.3.0",
     "lint-staged": "7.2.2",
@@ -33,8 +34,8 @@
     "format": "prettier-eslint --write \"packages/*/src/**/*.js\"",
     "lint": "eslint .",
     "commit": "git-cz",
+    "precommit": "lint-staged && opt --in pre-commit --exec \"npm test && npm run build\"",
     "commitmsg": "opt --in commit-msg --exec \"validate-commit-msg\"",
-    "precommit": "lint-staged && opt --in pre-commit --exec \"npm run test && npm run build\"",
     "validate": "run-p lint test build"
   },
   "lint-staged": {
@@ -72,6 +73,11 @@
     },
     "globals": {
       "window": false
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }
