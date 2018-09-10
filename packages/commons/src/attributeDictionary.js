@@ -1,4 +1,4 @@
-import { isObjectAssigned } from "./global";
+import { Utils } from "./utils";
 
 // unique key
 const _attributeDictionarySingleton = Symbol("attributeDictionarySingleton");
@@ -43,7 +43,7 @@ class AttributeDictionarySingleton {
    * @returns {boolean}
    */
   addRule(context, propertyName, rule) {
-    if (isObjectAssigned(context)) {
+    if (Utils.isObjectAssigned(context)) {
       context = context.toLowerCase();
 
       if (!isObjectAssigned(this._rules[context])) {
@@ -95,7 +95,7 @@ class AttributeDictionarySingleton {
     context = context.toLowerCase();
     parent = parent.toLowerCase();
 
-    if (!isObjectAssigned(this._inheritance[context])) {
+    if (!Utils.isObjectAssigned(this._inheritance[context])) {
       this._inheritance[context] = [];
     }
 

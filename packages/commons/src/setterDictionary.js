@@ -1,4 +1,4 @@
-import { isObjectAssigned } from "./global";
+import { Utils } from "./utils";
 
 // unique key
 const _setterDictionarySingleton = Symbol("setterDictionarySingleton");
@@ -40,7 +40,7 @@ class SetterDictionarySingleton {
    * @returns {boolean}
    */
   addRule(context, rule) {
-    if (isObjectAssigned(context)) {
+    if (Utils.isObjectAssigned(context)) {
       context = context.toLowerCase();
       this._rules[context] = rule;
       return true;

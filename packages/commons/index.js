@@ -3,5 +3,4 @@ export { default as Logger } from "./src/logger";
 
 export { AttributeDictionary } from "./src/attributeDictionary";
 export { SetterDictionary } from "./src/setterDictionary";
-
-export * from "./src/global";
+export { Utils } from "./src/utils";

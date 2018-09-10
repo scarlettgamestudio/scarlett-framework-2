@@ -1,5 +1,5 @@
 import Logger from "./logger";
-import { isFunction, isObjectAssigned, getType } from "./global";
+import { Utils } from "./utils";
 
 /**
  * Objectify utility class
@@ -25,7 +25,7 @@ export default class Objectify {
     let result = [];
     array.forEach(function(elem) {
       // this element has objectify implemented?
-      if (isFunction(elem.objectify)) {
+      if (Utils.isFunction(elem.objectify)) {
         try {
           let obj = Objectify.create(elem);
           if (obj) {
@@ -73,7 +73,7 @@ export default class Objectify {
    * @param object
    */
   static hasObjectify(object) {
-    return isObjectAssigned(object) && isFunction(object.objectify);
+    return Utils.isObjectAssigned(object) && Utils.isFunction(object.objectify);
   }
 
   /**
@@ -81,7 +81,7 @@ export default class Objectify {
    * @param object
    */
   static create(object) {
-    let type = getType(object);
+    let type = Utils.getType(object);
     let result;
     // this object has objectify?
     if (Objectify.hasObjectify(object)) {
@@ -104,7 +104,7 @@ export default class Objectify {
    */
   static restore(data, typeName) {
     try {
-      let type = isObjectAssigned(typeName) ? typeName : data._otype;
+      let type = Utils.isObjectAssigned(typeName) ? typeName : data._otype;
       type = eval(type);
       if (type && type.restore) {
         return type.restore(data);
