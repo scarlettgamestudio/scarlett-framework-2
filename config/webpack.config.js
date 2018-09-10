@@ -6,7 +6,8 @@ module.exports = {
   entry: {
     "scarlett-commons": "./packages/commons/index.js",
     "scarlett-math": "./packages/math/index.js",
-    "scarlett-core": glob.sync("./packages/core/src/**/*.js")
+    "scarlett-core": glob.sync("./packages/core/src/**/*.js"),
+    "scarlett-webgl": glob.sync("./packages/webgl/index.js")
   },
   output: {
     filename: "[name].js",

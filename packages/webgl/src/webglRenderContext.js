@@ -1,6 +1,6 @@
 import { RenderContext } from "scarlett-core";
 import { Utils } from "scarlett-commons";
-import { ShaderManager } from "./shader/shaderManager";
+import { ShaderManager } from "./shader/index";
 
 export default class WebGLRenderContext extends RenderContext {
   /**
