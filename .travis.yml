@@ -9,8 +9,8 @@ node_js:
   - "8"
 script:
   - npm run validate
-#after_success:
-# - npm run report-coverage
+after_success:
+  - npm run report-coverage
 # use a bash script to determine
 # if we are at master when running semantic-release
 #- npm run semantic-release
