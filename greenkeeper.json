@@ -1,0 +1,12 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "packages/commons/package.json",
+        "packages/core/package.json",
+        "packages/math/package.json"
+      ]
+    }
+  }
+}
