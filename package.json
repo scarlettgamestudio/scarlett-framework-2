@@ -37,11 +37,11 @@
     "format": "prettier-eslint --write \"packages/*/src/**/*.js\"",
     "lint": "eslint .",
     "commit": "git-cz",
-    "precommit": "lint-staged && opt --in pre-commit --exec \"npm test && npm run build\"",
+    "precommit": "lint-staged && opt --in pre-commit --exec \"yarn test && yarn run build\"",
     "commitmsg": "opt --in commit-msg --exec \"validate-commit-msg\"",
     "validate": "run-p lint test build",
     "link": "lerna bootstrap",
-    "postinstall": "npm run link"
+    "postinstall": "yarn run link"
   },
   "lint-staged": {
     "*.js": [
