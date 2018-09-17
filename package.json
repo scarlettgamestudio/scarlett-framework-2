@@ -5,7 +5,7 @@
   "author": "João Alves <joao.cpp.sca@gmail.com> and Luís Fernandes aka Apidcloud <luisapidcloud@hotmail.com>",
   "devDependencies": {
     "@babel/cli": "7.1.0",
-    "@babel/core": "7.0.1",
+    "@babel/core": "7.1.0",
     "@babel/preset-env": "7.0.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
