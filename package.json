@@ -4,30 +4,30 @@
   "license": "Apache-2.0",
   "author": "João Alves <joao.cpp.sca@gmail.com> and Luís Fernandes aka Apidcloud <luisapidcloud@hotmail.com>",
   "devDependencies": {
-    "@babel/cli": "7.0.0",
-    "@babel/core": "7.0.1",
-    "@babel/preset-env": "7.0.0",
+    "@babel/cli": "7.1.2",
+    "@babel/core": "7.1.2",
+    "@babel/preset-env": "7.1.0",
     "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "9.0.0",
+    "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
-    "babel-loader": "8.0.2",
+    "babel-loader": "8.0.4",
     "codecov": "3.1.0",
-    "commitizen": "2.10.1",
+    "commitizen": "3.0.4",
     "cz-conventional-changelog": "2.1.0",
-    "eslint": "5.5.0",
+    "eslint": "5.7.0",
     "eslint-import-resolver-webpack": "0.10.1",
     "eslint-plugin-import": "2.14.0",
-    "eslint-plugin-jest": "21.22.0",
-    "husky": "0.14.3",
+    "eslint-plugin-jest": "21.25.1",
+    "husky": "1.1.2",
     "jest": "23.6.0",
-    "lerna": "3.4.0",
-    "lint-staged": "7.2.2",
+    "lerna": "3.4.3",
+    "lint-staged": "7.3.0",
     "npm-run-all": "4.1.3",
     "opt-cli": "1.6.0",
     "prettier-eslint-cli": "4.7.1",
     "validate-commit-msg": "2.14.0",
-    "webpack": "4.19.0",
-    "webpack-cli": "3.1.1"
+    "webpack": "4.21.0",
+    "webpack-cli": "3.1.2"
   },
   "scripts": {
     "build": "webpack --config config/webpack.config.js",
@@ -37,8 +37,6 @@
     "format": "prettier-eslint --write \"packages/*/src/**/*.js\"",
     "lint": "eslint .",
     "commit": "git-cz",
-    "precommit": "lint-staged && opt --in pre-commit --exec \"yarn test && yarn run build\"",
-    "commitmsg": "opt --in commit-msg --exec \"validate-commit-msg\"",
     "validate": "run-p lint test build",
     "link": "lerna bootstrap",
     "postinstall": "yarn run link"
@@ -82,7 +80,13 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "opt --in commit-msg --exec \"validate-commit-msg\"",
+      "pre-commit": "lint-staged && opt --in pre-commit --exec \"yarn test && yarn run build\""
     }
   }
 }
