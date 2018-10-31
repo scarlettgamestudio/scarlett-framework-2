@@ -9,8 +9,8 @@ cache:
 notifications:
   email: false
 node_js:
-  - "6"
   - "8"
+  - "10"
 script:
   - yarn run validate
 after_success:

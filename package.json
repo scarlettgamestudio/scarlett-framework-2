@@ -3,6 +3,9 @@
   "private": true,
   "license": "Apache-2.0",
   "author": "João Alves <joao.cpp.sca@gmail.com> and Luís Fernandes aka Apidcloud <luisapidcloud@hotmail.com>",
+  "engines": {
+    "node": ">=8.6.0"
+  },
   "devDependencies": {
     "@babel/cli": "7.1.2",
     "@babel/core": "7.1.2",
