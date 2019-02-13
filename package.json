@@ -14,7 +14,7 @@
     "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
     "babel-loader": "8.0.4",
-    "codecov": "3.1.0",
+    "codecov": "3.2.0",
     "commitizen": "3.0.4",
     "cz-conventional-changelog": "2.1.0",
     "eslint": "5.7.0",
