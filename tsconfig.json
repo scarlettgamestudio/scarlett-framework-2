@@ -1,7 +1,11 @@
 {
-  "compilerOptions": {
-    "noEmit": true
-  },
-  "include": ["./packages/**/*"],
-  "exclude": ["node_modules", "build", "coverage", "config"]
+  "files": [],
+  "references": [
+    {
+      "path": "packages/commons"
+    },
+    {
+      "path": "packages/core"
+    }
+  ]
 }

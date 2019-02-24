@@ -1,34 +1,37 @@
-const path = require("path");
-const glob = require("glob");
+const path = require('path');
+const glob = require('glob');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
-  mode: "development",
+  mode: 'development',
   entry: {
-    "scarlett-commons": glob.sync("./packages/commons/index.js"),
-    "scarlett-core": glob.sync("./packages/core/src/**/*.js")
+    'scarlett-commons': glob.sync('./packages/commons/index.ts'),
+    'scarlett-core': glob.sync('./packages/core/index.ts'),
   },
   output: {
-    filename: "[name].js",
-    path: path.resolve("build")
+    filename: '[name].js',
+    path: path.resolve('build'),
   },
   resolve: {
-    // Look for modules in .js files first
-    extensions: [".js", ".json"],
+    // Look for modules in .ts files first
+    extensions: ['.js', '.ts', '.json'],
     // Add 'src' to our modules, as all our app code will live in there, so Webpack should look in there for modules
-    modules: ["packages", "node_modules"]
+    modules: ['packages', 'node_modules'],
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(ts|js)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-env"]
-          }
-        }
-      }
-    ]
-  }
+            presets: [['@babel/preset-env', { targets: { node: 'current' } }], '@babel/typescript'],
+            plugins: ['@babel/proposal-class-properties', '@babel/proposal-object-rest-spread'],
+          },
+        },
+      },
+    ],
+  },
+  plugins: [new ForkTsCheckerWebpackPlugin()],
 };

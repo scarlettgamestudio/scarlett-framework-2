@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "declaration": true,
+    "target": "es6",
+    "module": "es6",
+    "strict": true,
+    "composite": true
+  },
+  "exclude": [
+    "node_modules",
+    "packages/*/node_modules",
+    "build",
+    "coverage",
+    "config",
+    "packages/*/test"
+  ]
+}

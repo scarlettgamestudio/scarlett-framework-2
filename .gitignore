@@ -2,6 +2,12 @@ build
 .opt-in
 .opt-out
 
+# typescript
+packages/**/types
+
+# Lerna
+lerna-debug.log
+
 # Logs
 logs
 *.log
