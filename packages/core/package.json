@@ -6,7 +6,7 @@
   },
   "license": "Apache-2.0",
   "scripts": {
-    "check:types": "tsc --noEmit",
+    "check-types": "tsc --noEmit",
     "build:types": "tsc --emitDeclarationOnly"
   },
   "devDependencies": {

@@ -1,8 +1,9 @@
 {
   "extends": "../../tsconfig.settings.json",
   "compilerOptions": {
-    "declarationDir": "./types"
+    "declarationDir": "./dist"
   },
   "include": ["./src/**/*"],
-  "files": ["./index.ts"]
+  "files": ["./index.ts"],
+  "references": [{ "path": "../commons" }]
 }

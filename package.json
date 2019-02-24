@@ -1,9 +1,6 @@
 {
   "name": "scarlett",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "license": "Apache-2.0",
   "author": "João Alves <joao.cpp.sca@gmail.com> and Luís Fernandes aka Apidcloud <luisapidcloud@hotmail.com>",
   "engines": {
@@ -42,7 +39,7 @@
     "webpack-cli": "3.2.3"
   },
   "scripts": {
-    "check-types": "tsc --noEmit",
+    "check-types": "lerna run check-types",
     "build:types": "lerna run build:types",
     "build": "webpack --config config/webpack.config.js",
     "test": "jest --coverage",
@@ -52,8 +49,8 @@
     "lint": "eslint . --ext \".js,.ts\"",
     "commit": "git-cz",
     "validate": "run-p lint test build",
-    "link": "lerna bootstrap",
-    "postinstall": "yarn run link"
+    "bootstrap": "lerna bootstrap",
+    "postinstall": "yarn run bootstrap"
   },
   "lint-staged": {
     "*.js": [
