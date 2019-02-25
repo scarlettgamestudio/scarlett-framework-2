@@ -14,7 +14,9 @@ module.exports = {
     libraryTarget: "umd",
     umdNamedDefine: true,
     filename: "[name]/dist/scarlett-[name].js",
-    path: path.resolve("packages")
+    path: path.resolve("packages"),
+    // fix for https://github.com/webpack/webpack/issues/6525
+    globalObject: `(typeof self !== 'undefined' ? self : this)`
   },
   resolve: {
     // Look for modules in .ts files first
