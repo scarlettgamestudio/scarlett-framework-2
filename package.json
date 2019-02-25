@@ -1,11 +1,15 @@
 {
   "name": "scarlett",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "license": "Apache-2.0",
   "author": "João Alves <joao.cpp.sca@gmail.com> and Luís Fernandes aka Apidcloud <luisapidcloud@hotmail.com>",
   "engines": {
     "node": ">=8.6.0"
   },
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "7.2.3",
     "@babel/core": "7.3.3",

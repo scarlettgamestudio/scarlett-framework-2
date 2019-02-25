@@ -1,15 +1,17 @@
 {
   "name": "@scarlett-game-studio/scarlett-core",
   "version": "0.0.1",
+  "main": "index.ts",
+  "author": "Apidcloud <luisapidcloud@hotmail.com>",
+  "license": "MIT",
   "dependencies": {
     "@scarlett-game-studio/scarlett-commons": "0.0.1"
   },
-  "license": "Apache-2.0",
+  "devDependencies": {
+    "typescript": "3.3.3333"
+  },
   "scripts": {
     "check-types": "tsc --noEmit",
     "build:types": "tsc --emitDeclarationOnly"
-  },
-  "devDependencies": {
-    "typescript": "3.3.3333"
   }
 }
