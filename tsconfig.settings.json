@@ -20,6 +20,6 @@
     "build",
     "coverage",
     "config",
-    "packages/*/test"
+    "packages/*/__tests__"
   ]
 }

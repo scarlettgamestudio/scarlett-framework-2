@@ -72,13 +72,15 @@
       "node_modules",
       "packages"
     ],
-    "testRegex": "./(packages)/[^/]+/test/.+\\.(ts|js)$",
+    "testRegex": "./(packages)/[^/]+/__tests__/.+\\.(test|spec)\\.(ts|js)$",
     "moduleFileExtensions": [
       "js",
       "ts",
       "json"
     ],
     "collectCoverageFrom": [
+      "!**/dist/**",
+      "!**/node_modules/**",
       "!packages/**/index.ts",
       "packages/**/*.ts"
     ],
