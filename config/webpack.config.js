@@ -9,6 +9,10 @@ module.exports = {
     core: glob.sync("./packages/core/index.ts")
   },
   output: {
+    library: "SC",
+    // export itself to UMD format
+    libraryTarget: "umd",
+    umdNamedDefine: true,
     filename: "[name]/dist/scarlett-[name].js",
     path: path.resolve("packages")
   },
