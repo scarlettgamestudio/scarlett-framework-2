@@ -2,6 +2,7 @@
   "name": "@scarlett-game-studio/scarlett-commons",
   "version": "0.0.1",
   "main": "dist/scarlett-commons.js",
+  "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],

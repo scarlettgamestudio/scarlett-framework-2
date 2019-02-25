@@ -52,7 +52,7 @@
     "format": "prettier-eslint --write \"packages/*/src/**/*.(ts|js)$\"",
     "lint": "eslint . --ext \".js,.ts\"",
     "commit": "git-cz",
-    "validate": "run-p lint test build",
+    "validate": "run-p lint test check-types build:types build",
     "bootstrap": "lerna bootstrap",
     "postinstall": "yarn run bootstrap"
   },

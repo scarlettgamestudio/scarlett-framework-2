@@ -2,10 +2,11 @@
   "name": "@scarlett-game-studio/scarlett-core",
   "version": "0.0.1",
   "main": "dist/scarlett-core.js",
+  "typings": "dist/index.d.ts",
   "author": "Apidcloud <luisapidcloud@hotmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@scarlett-game-studio/scarlett-commons": "0.0.1"
+    "@scarlett-game-studio/scarlett-commons": "^0.0.1"
   },
   "devDependencies": {
     "typescript": "3.3.3333"

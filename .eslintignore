@@ -1,5 +1,5 @@
 node_modules
-build
+packages/**/dist
 coverage
 demos
 config
