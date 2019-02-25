@@ -1,7 +1,7 @@
 {
   "name": "@scarlett-game-studio/scarlett-core",
   "version": "0.0.1",
-  "main": "index.ts",
+  "main": "dist/scarlett-core.js",
   "author": "Apidcloud <luisapidcloud@hotmail.com>",
   "license": "MIT",
   "dependencies": {

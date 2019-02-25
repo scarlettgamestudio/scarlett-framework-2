@@ -1,7 +1,10 @@
 {
   "name": "@scarlett-game-studio/scarlett-commons",
   "version": "0.0.1",
-  "main": "index.ts",
+  "main": "dist/scarlett-commons.js",
+  "files": [
+    "dist"
+  ],
   "license": "Apache-2.0",
   "scripts": {
     "check-types": "tsc --noEmit",
