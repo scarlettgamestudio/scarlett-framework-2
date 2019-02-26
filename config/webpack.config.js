@@ -1,6 +1,6 @@
 const path = require("path");
-const tsConfig = require("../tsconfig");
-const availablePackages = require("./fetchAvailablePackages")(tsConfig);
+const tsConfigReferences = require("../tsconfig").references;
+const availablePackages = require("./fetchAvailablePackages")(tsConfigReferences);
 const createEntries = require("./createEntries")(availablePackages);
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
