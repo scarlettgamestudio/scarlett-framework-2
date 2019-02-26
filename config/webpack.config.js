@@ -1,13 +1,12 @@
 const path = require("path");
-const glob = require("glob");
+const tsConfig = require("../tsconfig");
+const availablePackages = require("./fetchAvailablePackages")(tsConfig);
+const createEntries = require("./createEntries")(availablePackages);
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: {
-    commons: glob.sync("./packages/commons/index.ts"),
-    core: glob.sync("./packages/core/index.ts")
-  },
+  entry: createEntries("index.ts"),
   output: {
     library: "SC",
     // export itself to UMD format
