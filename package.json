@@ -57,7 +57,7 @@
     "postinstall": "yarn run bootstrap"
   },
   "lint-staged": {
-    "*.js": [
+    "*.(ts|js)": [
       "prettier-eslint --write",
       "git add"
     ]
@@ -104,7 +104,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "opt --in commit-msg --exec \"validate-commit-msg\"",
-      "pre-commit": "lint-staged && opt --in pre-commit --exec \"yarn test && yarn run build\""
+      "pre-commit": "lint-staged && opt --in pre-commit --exec \"yarn run validate\""
     }
   }
 }
