@@ -4,3 +4,4 @@ coverage
 demos
 config
 babel.config.js
+webpack.config.js
