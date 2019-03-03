@@ -1,13 +1,9 @@
-const path = require("path");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 // the variable name from which the library should be accessed from
 // when using a global var (ES6)
 const globalLibraryName = "SC";
-// the entry filename of the library (inside src)
-const entryFilenames = ["index.ts"];
 
 module.exports = {
-  entry: entryFilenames,
   // devtool is already set with -d (debug) and removed with -p (production) flags from webpack and webpack dev server
   // devtool: 'source-map',
 
@@ -17,8 +13,6 @@ module.exports = {
     // export itself to UMD format
     libraryTarget: "umd",
     umdNamedDefine: true,
-    filename: "[name]/dist/scarlett-[name].js",
-    //path: path.resolve("packages"),
     // fix for https://github.com/webpack/webpack/issues/6525
     globalObject: `(typeof self !== 'undefined' ? self : this)`
   },
@@ -26,7 +20,7 @@ module.exports = {
     // Look for modules in .js files first
     extensions: [".js", ".ts", ".json"],
     // Add 'src' to our modules, as all our app code will live in there, so Webpack should look in there for modules
-    modules: ["src", "node_modules"]
+    modules: ["packages", "node_modules"]
   },
   module: {
     rules: [
