@@ -1,32 +1,32 @@
-const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
-
 const path = require("path");
-const rootPath = path.join(__dirname, "../");
-
-// fetches and creates the packages that do not have a custom build script within
-const tsConfigReferences = require("../tsconfig").references;
-const availablePackages = require("./scripts/fetchAvailablePackages")(tsConfigReferences);
-const standardBuildPackages = require("./scripts/fetchNonCustomBuildPackages")(rootPath, availablePackages);
-const createBuildEntries = require("./scripts/createBuildEntries")(standardBuildPackages);
+const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+// the variable name from which the library should be accessed from
+// when using a global var (ES6)
+const globalLibraryName = "SC";
+// the entry filename of the library (inside src)
+const entryFilenames = ["index.ts"];
 
 module.exports = {
-  mode: "development",
-  entry: createBuildEntries("index.ts"),
+  entry: entryFilenames,
+  // devtool is already set with -d (debug) and removed with -p (production) flags from webpack and webpack dev server
+  // devtool: 'source-map',
+
+  // Output the bundled JS as UMD (Universal Module definition)
   output: {
-    library: "SC",
+    library: globalLibraryName,
     // export itself to UMD format
     libraryTarget: "umd",
     umdNamedDefine: true,
     filename: "[name]/dist/scarlett-[name].js",
-    path: path.resolve("packages"),
+    //path: path.resolve("packages"),
     // fix for https://github.com/webpack/webpack/issues/6525
     globalObject: `(typeof self !== 'undefined' ? self : this)`
   },
   resolve: {
-    // Look for modules in .ts files first
+    // Look for modules in .js files first
     extensions: [".js", ".ts", ".json"],
     // Add 'src' to our modules, as all our app code will live in there, so Webpack should look in there for modules
-    modules: ["packages", "node_modules"]
+    modules: ["src", "node_modules"]
   },
   module: {
     rules: [

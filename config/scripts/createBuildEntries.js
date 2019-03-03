@@ -1,5 +1,7 @@
 const path = require("path");
 
+// creates the webpack entries
+// e.g., { core: './packages/core/index.ts' }
 module.exports = paths => entryFilename => {
   let result = {};
 

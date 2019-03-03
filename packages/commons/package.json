@@ -9,9 +9,13 @@
   "license": "Apache-2.0",
   "scripts": {
     "check-types": "tsc --noEmit",
-    "build:types": "tsc --emitDeclarationOnly"
+    "build:types": "tsc --emitDeclarationOnly",
+    "build": "webpack"
   },
   "devDependencies": {
-    "typescript": "3.3.3333"
-  }
+    "typescript": "3.3.3333",
+    "webpack": "4.29.6",
+    "webpack-merge": "4.2.1"
+  },
+  "dependencies": {}
 }
