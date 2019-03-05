@@ -1,18 +1,19 @@
 const path = require("path");
 
 module.exports = {
-  parser: "babel-eslint",
+  parser: "pluggable-babel-eslint",
   parserOptions: {
     ecmaVersion: 6,
-    sourceType: "module"
+    sourceType: "module",
+    plugins: ["typescript"]
   },
   env: {
     browser: true,
     es6: true,
     jest: true
   },
-  extends: ["eslint:recommended", "plugin:import/errors", "plugin:import/warnings"],
   plugins: ["jest"],
+  extends: ["eslint:recommended", "plugin:import/errors", "plugin:import/warnings", "plugin:jest/recommended"],
   rules: {
     "no-console": 0,
     "max-len": ["error", 120]

@@ -1,6 +1,7 @@
 node_modules
-build
+packages/**/dist
 coverage
 demos
 config
 babel.config.js
+webpack.config.js

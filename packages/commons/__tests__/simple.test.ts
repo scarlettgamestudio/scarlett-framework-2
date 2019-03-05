@@ -3,8 +3,8 @@
 import Simple from "../src/simple";
 
 test("Something", () => {
-  expect.assertions();
+  expect.assertions(1);
 
-  const simple = new Simple();
+  const simple: Simple = new Simple();
   expect(simple.methodB()).toBe("something");
 });

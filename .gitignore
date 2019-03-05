@@ -1,6 +1,8 @@
-build
 .opt-in
 .opt-out
+
+# builds and typings
+packages/**/dist
 
 # Logs
 logs
