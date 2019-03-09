@@ -45,6 +45,7 @@
   },
   "scripts": {
     "check-types": "lerna run check-types",
+    "check-types:watch": "lerna run --parallel check-types:watch",
     "build:types": "lerna run build:types",
     "build:default": "webpack --config config/webpack.config.js",
     "build": "lerna run build -- -d && yarn build:default -d",
