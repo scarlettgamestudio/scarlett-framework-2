@@ -4,7 +4,7 @@
   "main": "dist/scarlett-core.js",
   "typings": "dist/index.d.ts",
   "author": "Apidcloud <luisapidcloud@hotmail.com>",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "dependencies": {
     "@scarlett-game-studio/scarlett-commons": "^0.0.1"
   },
@@ -13,6 +13,7 @@
   },
   "scripts": {
     "check-types": "tsc --noEmit",
+    "check-types:watch": "yarn check-types --watch",
     "build:types": "tsc --emitDeclarationOnly"
   }
 }
