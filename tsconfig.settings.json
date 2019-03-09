@@ -11,7 +11,7 @@
     "target": "es6",
     "module": "es6",
     "strict": true,
-    "composite": true,
+    "composite": true
     "types": ["jest"],
     "lib": ["es6", "dom"]
   },
