@@ -3,6 +3,10 @@
 
 # builds and typings
 packages/*/dist
+dist
+
+# parcel
+.cache
 
 # Logs
 logs

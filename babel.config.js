@@ -20,7 +20,8 @@ module.exports = api => {
     case "development": {
       envOpts.targets = {
         node: "current",
-        browsers: ["last 2 versions"]
+        browsers: ["last 2 versions"],
+        esmodules: true
       };
       break;
     }

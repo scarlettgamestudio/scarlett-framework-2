@@ -1,0 +1,14 @@
+{
+  "name": "demos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Apidcloud <luisapidcloud@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel main.html",
+    "build:watch": "parcel watch main.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "1.12.0"
+  }
+}
