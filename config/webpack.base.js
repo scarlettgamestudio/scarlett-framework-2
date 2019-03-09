@@ -14,7 +14,7 @@ module.exports = {
     libraryTarget: "umd",
     umdNamedDefine: true,
     // fix for https://github.com/webpack/webpack/issues/6525
-    globalObject: `(typeof self !== 'undefined' ? self : this)`
+    globalObject: `(self || this)`
   },
   resolve: {
     // Look for modules in .js files first
@@ -30,8 +30,9 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: [["@babel/preset-env", { targets: { node: "current" } }], "@babel/typescript"],
-            plugins: ["@babel/proposal-class-properties", "@babel/proposal-object-rest-spread"]
+            // This is needed so subpackages are able to find the config
+            // individual packages can still have custom rules using "overrides" or "babelrcRoots"
+            rootMode: "upward"
           }
         }
       }

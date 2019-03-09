@@ -2,7 +2,7 @@
 .opt-out
 
 # builds and typings
-packages/**/dist
+packages/*/dist
 
 # Logs
 logs
