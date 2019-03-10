@@ -6,7 +6,10 @@ let y: string = x.methodB();
 console.log(y);
 
 const p = new Person("Luis");
-console.log(JSON.stringify(p));
+
+const data = JSON.parse(JSON.stringify(p));
+
+console.log(data);
 
 export function fn() {
   return "Hello world";

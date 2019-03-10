@@ -17,9 +17,17 @@ class Person {
     return this._name;
   }
 
+  set name(value: string) {
+    this._name = value;
+  }
+
   @serialize("XPTO")
   get simple() {
     return this._simple;
+  }
+
+  set simple(value: Simple) {
+    this._simple = value;
   }
 
   @serialize("Language")
