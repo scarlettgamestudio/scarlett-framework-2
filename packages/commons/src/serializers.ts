@@ -19,6 +19,19 @@ export function serializable() {
         return previous;
       }, {});
     };
+
+    /** 
+    target.prototype.restore = function(data: object) {
+      const map: any = serialized.get(target.prototype);
+      const props: Array<string> = Object.keys(map);
+
+      const dataKeys = Object.keys(data);
+
+      let result = {};
+
+      console.log(map);
+    };
+    **/
   };
 }
 

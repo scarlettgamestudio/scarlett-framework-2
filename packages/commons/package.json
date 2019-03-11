@@ -18,5 +18,7 @@
     "webpack": "4.29.6",
     "webpack-merge": "4.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "typedjson": "^1.2.3"
+  }
 }

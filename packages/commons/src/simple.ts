@@ -1,16 +1,20 @@
-import { serializable, serialize } from "./serializers";
+//import { serializable, serialize } from "./serializers";
 
-@serializable()
+import { jsonObject, jsonArrayMember } from "typedjson";
+
+@jsonObject()
 class Simple {
-  private _arr: Array<string> = ["str1", "str2"];
+  private _arr: string[] = ["str1", "str2", "str3"];
 
-  @serialize("Array of strings")
-  get arr(): Array<string> {
+  constructor() {}
+
+  @jsonArrayMember(String)
+  get arr(): string[] {
     return this._arr;
   }
 
-  set arr(value: Array<string>) {
-    this._arr = value;
+  set arr(arr: string[]) {
+    this._arr = arr;
   }
 
   methodB(): string {

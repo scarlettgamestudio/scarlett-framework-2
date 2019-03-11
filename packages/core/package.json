@@ -6,7 +6,8 @@
   "author": "Apidcloud <luisapidcloud@hotmail.com>",
   "license": "Apache-2.0",
   "dependencies": {
-    "@scarlett-game-studio/scarlett-commons": "^0.0.1"
+    "@scarlett-game-studio/scarlett-commons": "^0.0.1",
+    "typedjson": "^1.2.3"
   },
   "devDependencies": {
     "typescript": "3.3.3333"

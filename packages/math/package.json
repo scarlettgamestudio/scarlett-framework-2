@@ -9,5 +9,8 @@
   },
   "devDependencies": {
     "typescript": "3.3.3333"
+  },
+  "dependencies": {
+    "typedjson": "^1.2.3"
   }
 }
