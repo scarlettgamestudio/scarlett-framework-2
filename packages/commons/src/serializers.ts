@@ -1,9 +1,22 @@
-const serialized = new WeakMap();
+//const serialized = new WeakMap();
 
-export function serializable() {
+import { TypedJSON } from "typedjson";
+
+let Serializer: any;
+
+export function serializable(): ClassDecorator {
   return function(target: Function) {
-    //console.log(target);
-    //console.log(target.prototype);
+    target.prototype.toJSON = function() {
+      Serializer = new TypedJSON(target.prototype.constructor);
+
+      const result = Serializer.stringify(this);
+
+      console.log("result: ", result);
+
+      return result;
+    };
+
+    /** 
     target.prototype.toJSON = function() {
       const map: any = serialized.get(target.prototype);
       console.log(map);
@@ -19,6 +32,7 @@ export function serializable() {
         return previous;
       }, {});
     };
+    **/
 
     /** 
     target.prototype.restore = function(data: object) {
@@ -35,6 +49,7 @@ export function serializable() {
   };
 }
 
+/** 
 export function serialize(name?: string): PropertyDecorator {
   return function(target: Object, propertyKey: string | symbol) {
     let map = serialized.get(target);
@@ -45,4 +60,4 @@ export function serialize(name?: string): PropertyDecorator {
 
     map[propertyKey] = name || propertyKey;
   };
-}
+**/

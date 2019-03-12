@@ -4,7 +4,7 @@ import { jsonObject, jsonArrayMember } from "typedjson";
 
 @jsonObject()
 class Simple {
-  private _arr: string[] = ["str1", "str2", "str3"];
+  private _arr: string[] = ["str1", "str2", "str3", "str4"];
 
   constructor() {}
 
