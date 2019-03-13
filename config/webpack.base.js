@@ -10,7 +10,7 @@ module.exports = {
     libraryTarget: "umd",
     umdNamedDefine: true,
     // fix for https://github.com/webpack/webpack/issues/6525
-    globalObject: `(self || this)`
+    globalObject: `(typeof self !== 'undefined' ? self : this)`
   },
   resolve: {
     // Look for modules in .js files first
