@@ -1,7 +1,4 @@
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
-// the variable name from which the library should be accessed from
-// when using a global var (ES6)
-const globalLibraryName = "SC";
 
 module.exports = {
   // devtool is already set with -d (debug) and removed with -p (production) flags from webpack and webpack dev server
@@ -9,7 +6,6 @@ module.exports = {
 
   // Output the bundled JS as UMD (Universal Module definition)
   output: {
-    library: globalLibraryName,
     // export itself to UMD format
     libraryTarget: "umd",
     umdNamedDefine: true,
