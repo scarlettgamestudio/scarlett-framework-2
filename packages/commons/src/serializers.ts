@@ -2,18 +2,41 @@
 
 import { TypedJSON } from "typedjson";
 
-let Serializer: any;
+//let Serializer: any;
+
+//@ts-ignore
+// eslint-disable-next-line
+interface ParameterlessConstructor<T> {
+  //eslint-disable-next-line
+  new (): T;
+}
+
+export class Helper {
+  static restoreFromJson<T>(data: object, target: ParameterlessConstructor<T>): T | undefined {
+    const result = TypedJSON.parse(data, target);
+    console.log("parsed: ", result);
+    return result;
+  }
+}
 
 export function serializable(): ClassDecorator {
   return function(target: Function) {
     target.prototype.toJSON = function() {
-      Serializer = new TypedJSON(target.prototype.constructor);
+      //Serializer = new TypedJSON(target.prototype.constructor);
 
-      const result = Serializer.stringify(this);
+      const result = TypedJSON.toPlainJson(this, target.prototype.constructor);
+
+      //const result = Serializer.stringify(this);
 
       console.log("result: ", result);
 
       return result;
+    };
+
+    target.prototype.restoreFromJson = function(data: any) {
+      const result = TypedJSON.parse(data, target.prototype.constructor);
+      console.log("parsed: ", result);
+      Object.assign(this, result);
     };
 
     /** 

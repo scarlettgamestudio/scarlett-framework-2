@@ -1,4 +1,4 @@
-//import { serializable } from "./serializers";
+import { serializable } from "./serializers";
 import Simple from "./simple";
 //import { logClass } from "./logClass";
 import { jsonObject, jsonMember, TypedJSON } from "typedjson";
@@ -55,8 +55,8 @@ function toJson<T>(target: ParameterlessConstructor<T>) {
   }
 **/
 
-//@serializable()
-@toJson
+@serializable()
+//@toJson
 @jsonObject
 class Person {
   constructor(name?: string) {
