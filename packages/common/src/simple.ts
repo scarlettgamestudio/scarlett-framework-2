@@ -1,8 +1,5 @@
-import { serializable } from "./serializers";
-
 import { jsonObject, jsonArrayMember } from "typedjson";
 
-@serializable()
 @jsonObject
 class Simple {
   private _arr: string[] = ["str1", "str2", "str3", "str4"];
