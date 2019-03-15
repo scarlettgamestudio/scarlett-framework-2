@@ -1,5 +1,5 @@
-const commons = require("../../packages/commons/");
+const common = require("../../packages/common/");
 
-const person = new commons.Simple();
+const person = new common.Simple();
 
 console.log(person);

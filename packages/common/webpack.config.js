@@ -11,8 +11,8 @@ module.exports = (env = {}) => {
   let custom = {
     entry: "./index.ts",
     output: {
-      library: [libraryName, "commons"],
-      filename: "scarlett-commons.js",
+      library: [libraryName, "common"],
+      filename: "scarlett-common.js",
       path: path.resolve(__dirname, "./dist")
     },
     resolve: {
