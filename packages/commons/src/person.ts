@@ -1,8 +1,9 @@
-import { serializable } from "./serializers";
+//import { serializable } from "./serializers";
 import Simple from "./simple";
 //import { logClass } from "./logClass";
-import { jsonObject, jsonMember, TypedJSON } from "typedjson";
+import { jsonObject, jsonMember, TypedJSON, toJson } from "typedjson";
 
+/** 
 // eslint-disable-next-line
 interface ParameterlessConstructor<T> {
   //eslint-disable-next-line
@@ -16,6 +17,7 @@ function toJson<T>(target: ParameterlessConstructor<T>) {
     return TypedJSON.toPlainJson(this, target);
   };
 }
+**/
 
 /** 
  * Or through the following decorator.
@@ -55,8 +57,8 @@ function toJson<T>(target: ParameterlessConstructor<T>) {
   }
 **/
 
-@serializable()
-//@toJson
+//@serializable()
+@toJson
 @jsonObject
 class Person {
   constructor(name?: string) {
