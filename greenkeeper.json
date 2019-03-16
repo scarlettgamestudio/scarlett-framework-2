@@ -3,7 +3,7 @@
     "default": {
       "packages": [
         "package.json",
-        "packages/commons/package.json",
+        "packages/common/package.json",
         "packages/core/package.json",
         "packages/math/package.json"
       ]
