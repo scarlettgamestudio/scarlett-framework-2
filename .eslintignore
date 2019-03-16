@@ -5,3 +5,6 @@ demos
 config
 babel.config.js
 webpack.config.js
+jestBabelTransform.js
+jest.config.base.js
+jest.config.js

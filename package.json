@@ -50,7 +50,8 @@
     "build:types": "lerna run build:types",
     "build:default": "webpack --config config/webpack.config.js",
     "build": "lerna run build:types && lerna run build -- -d && yarn build:default -d",
-    "test": "jest --coverage",
+    "test": "lerna run test",
+    "test:watch": "lerna run --parallel test:watch",
     "watch:test": "jest --watch",
     "report-coverage": "codecov",
     "format": "prettier-eslint --write \"packages/*/src/**/*.(ts|js)$\"",
@@ -65,40 +66,6 @@
       "prettier-eslint --write",
       "git add"
     ]
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "setupFiles": [],
-    "transform": {
-      "^.+\\.(js|ts)$": "babel-jest"
-    },
-    "moduleDirectories": [
-      "node_modules",
-      "packages"
-    ],
-    "testRegex": "./(packages)/[^/]+/__tests__/.+\\.(test|spec)\\.(ts|js)$",
-    "moduleFileExtensions": [
-      "js",
-      "ts",
-      "json"
-    ],
-    "collectCoverageFrom": [
-      "!**/dist/**",
-      "!**/node_modules/**",
-      "!packages/**/index.ts",
-      "packages/**/*.ts"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 0,
-        "functions": 0,
-        "lines": 0,
-        "statements": 0
-      }
-    },
-    "globals": {
-      "window": false
-    }
   },
   "config": {
     "commitizen": {

@@ -5,9 +5,12 @@
   "scripts": {
     "check-types": "tsc --noEmit",
     "check-types:watch": "yarn check-types --watch",
-    "build:types": "tsc --emitDeclarationOnly"
+    "build:types": "tsc --emitDeclarationOnly",
+    "test": "jest --coverage --verbose --color --passWithNoTests",
+    "test:watch": "yarn test --watch"
   },
   "devDependencies": {
+    "jest": "24.5.0",
     "typescript": "3.3.3333"
   },
   "dependencies": {

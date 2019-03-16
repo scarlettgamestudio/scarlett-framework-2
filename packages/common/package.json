@@ -11,9 +11,12 @@
     "check-types": "tsc --noEmit",
     "check-types:watch": "yarn check-types --watch",
     "build:types": "tsc --emitDeclarationOnly",
-    "build": "webpack"
+    "build": "webpack",
+    "test": "jest --coverage --verbose --color",
+    "test:watch": "yarn test --watch"
   },
   "devDependencies": {
+    "jest": "24.5.0",
     "typescript": "3.3.3333",
     "webpack": "4.29.6",
     "webpack-merge": "4.2.1"
