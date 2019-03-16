@@ -16,5 +16,6 @@ module.exports = {
   },
   globals: {
     window: false
-  }
+  },
+  testRunner: "jest-circus/runner"
 };
