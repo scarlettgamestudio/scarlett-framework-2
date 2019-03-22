@@ -1,0 +1,17 @@
+{
+  "name": "@scarlett-game-studio/scarlett-shaders",
+  "version": "0.0.1",
+  "main": "dist/scarlett-shaders.js",
+  "typings": "dist/index.d.ts",
+  "author": "Apidcloud <luisapidcloud@hotmail.com>",
+  "license": "Apache-2.0",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "3.3.3333"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "check-types:watch": "yarn check-types --watch",
+    "build:types": "tsc --emitDeclarationOnly"
+  }
+}
