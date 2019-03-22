@@ -21,3 +21,5 @@ console.log("instance of Geometry", restoredObj instanceof core.Geometry);
 console.log("instance of GameObject", restoredObj instanceof core.GameObject);
 
 console.log("is browser: ", common.isBrowser());
+
+console.log("rng: ", common.generateUUID());
