@@ -5,7 +5,9 @@
   "typings": "dist/index.d.ts",
   "author": "Apidcloud <luisapidcloud@hotmail.com>",
   "license": "Apache-2.0",
-  "dependencies": {},
+  "dependencies": {
+    "@scarlett-game-studio/scarlett-common": "^0.0.1"
+  },
   "devDependencies": {
     "typescript": "3.3.3333"
   },
