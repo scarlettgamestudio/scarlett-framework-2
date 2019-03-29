@@ -1,4 +1,4 @@
-import SerializationHelper from "../src/serializationHelper";
+import { SerializationHelper } from "../src/serializationHelper";
 import { toJson, jsonObject, jsonMember } from "typedjson";
 
 @toJson

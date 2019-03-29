@@ -10,9 +10,16 @@ const data = JSON.stringify(geometry);
 console.log("geometry data", data);
 
 // deserialization
-const restoredObj = common.SerializationHelper.restoreFromJson(data, core.Geometry);
+const restoredObj = common.SerializationHelper.restoreFromJson(
+  data,
+  core.Geometry
+);
 
 console.log("restored geometry", restoredObj);
 
 console.log("instance of Geometry", restoredObj instanceof core.Geometry);
 console.log("instance of GameObject", restoredObj instanceof core.GameObject);
+
+console.log("is browser: ", common.isBrowser());
+
+console.log("rng: ", common.generateUUID());

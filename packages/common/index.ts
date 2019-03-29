@@ -1,3 +1,5 @@
-export { default as Simple } from "./src/simple";
-export { default as Person } from "./src/person";
-export { default as SerializationHelper } from "./src/serializationHelper";
+export { Simple } from "./src/simple";
+export { Person } from "./src/person";
+export { SerializationHelper } from "./src/serializationHelper";
+export { isBrowser, isObjectAssigned, generateUUID } from "./src/utils";
+export * from "./src/math";

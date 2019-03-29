@@ -20,4 +20,4 @@ class Simple {
   }
 }
 
-export default Simple;
+export { Simple };

@@ -4,6 +4,12 @@ module.exports = {
   // devtool is already set with -d (debug) and removed with -p (production) flags from webpack and webpack dev server
   // devtool: 'source-map',
 
+  mode: "development",
+
+  optimization: {
+    usedExports: true
+  },
+
   // Output the bundled JS as UMD (Universal Module definition)
   output: {
     // export itself to UMD format

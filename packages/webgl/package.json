@@ -1,14 +1,13 @@
 {
-  "name": "@scarlett-game-studio/scarlett-core",
+  "name": "@scarlett-game-studio/scarlett-webgl",
   "sideEffects": false,
   "version": "0.0.1",
-  "main": "dist/scarlett-core.js",
+  "main": "dist/scarlett-webgl.js",
   "typings": "dist/index.d.ts",
   "author": "Apidcloud <luisapidcloud@hotmail.com>",
   "license": "Apache-2.0",
   "dependencies": {
-    "@scarlett-game-studio/scarlett-common": "^0.0.1",
-    "typedjson": "^1.3.0"
+    "@scarlett-game-studio/scarlett-common": "^0.0.1"
   },
   "devDependencies": {
     "typescript": "3.3.3333"

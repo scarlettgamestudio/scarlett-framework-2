@@ -7,7 +7,7 @@ interface ParameterlessConstructor<T> {
   new (): T;
 }
 
-export default class SerializationHelper {
+export class SerializationHelper {
   static restoreFromJson<T>(data: any, target: ParameterlessConstructor<T>): T | undefined {
     const result = TypedJSON.parse(data, target);
     return result;

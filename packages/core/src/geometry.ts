@@ -1,5 +1,5 @@
 import { jsonMember, jsonObject } from "typedjson";
-import GameObject from "./gameObject";
+import { GameObject } from "./gameObject";
 
 @jsonObject
 class Geometry extends GameObject {
@@ -7,4 +7,4 @@ class Geometry extends GameObject {
   num?: number;
 }
 
-export default Geometry;
+export { Geometry };
