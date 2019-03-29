@@ -3,7 +3,7 @@
  */
 import { isObjectAssigned } from "@scarlett-game-studio/scarlett-common";
 
-export default class WebGLContext {
+export class WebGLContext {
   //#region Fields
 
   private _canvas: HTMLCanvasElement | null;

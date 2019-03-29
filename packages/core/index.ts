@@ -1,4 +1,4 @@
 export * from "./src/coreExample";
-export { default as GameObject } from "./src/gameObject";
-export { default as Geometry } from "./src/geometry";
-export { default as GameManager } from "./src/gameManager";
+export * from "./src/gameObject";
+export * from "./src/geometry";
+export * from "./src/gameManager";

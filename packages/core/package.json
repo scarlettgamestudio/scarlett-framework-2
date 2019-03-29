@@ -1,5 +1,6 @@
 {
   "name": "@scarlett-game-studio/scarlett-core",
+  "sideEffects": false,
   "version": "0.0.1",
   "main": "dist/scarlett-core.js",
   "typings": "dist/index.d.ts",

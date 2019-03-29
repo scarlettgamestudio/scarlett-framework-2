@@ -1,4 +1,4 @@
-import Simple from "./simple";
+import { Simple } from "./simple";
 import { jsonObject, jsonMember, TypedJSON, toJson } from "typedjson";
 
 @toJson
@@ -44,4 +44,4 @@ class Person {
   }
 }
 
-export default Person;
+export { Person };

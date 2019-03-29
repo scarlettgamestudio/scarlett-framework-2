@@ -5,6 +5,7 @@ module.exports = api => {
     // examples below
     //loose: true,
     //modules: false,
+    //debug: true
   };
 
   // maybe use the following for "production"

@@ -1,7 +1,7 @@
 /**
  * Game Manager static class
  */
-export default class GameManager {
+export class GameManager {
   //#region Static Properties
 
   public static RenderContext: RenderingContext;

@@ -1,5 +1,6 @@
 {
   "name": "@scarlett-game-studio/scarlett-shaders",
+  "sideEffects": false,
   "version": "0.0.1",
   "main": "dist/scarlett-shaders.js",
   "typings": "dist/index.d.ts",

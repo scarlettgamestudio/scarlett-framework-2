@@ -1,6 +1,6 @@
 // or import {Simple} from "common"
 // though you can't go to the definition that way
-import Simple from "../src/simple";
+import { Simple } from "../src/simple";
 
 test("Something", () => {
   expect.assertions(1);

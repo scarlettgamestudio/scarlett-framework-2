@@ -7,4 +7,4 @@ class GameObject {
   prop?: string;
 }
 
-export default GameObject;
+export { GameObject };
