@@ -42,7 +42,7 @@
     "validate-commit-msg": "2.14.0",
     "webpack": "4.29.6",
     "webpack-cli": "3.3.0",
-    "webpack-merge": "4.2.1"
+    "webpack-merge": "4.2.2"
   },
   "scripts": {
     "check-types": "lerna run check-types",
