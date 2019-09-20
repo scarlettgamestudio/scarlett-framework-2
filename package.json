@@ -22,7 +22,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "24.5.0",
     "babel-loader": "8.0.5",
-    "codecov": "3.2.0",
+    "codecov": "3.6.1",
     "commitizen": "3.0.7",
     "cz-lerna-changelog": "2.0.2",
     "eslint": "5.15.2",
